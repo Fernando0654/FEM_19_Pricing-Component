@@ -6,17 +6,17 @@ let toggleOff = true;
 
 toggle.addEventListener("click", () => {
     toggleOff = !toggleOff;
-    toggleOff 
-    ? toggleCircle.style.transform = "translate(10%, -50%)"
-    : toggleCircle.style.transform = "translate(120%, -50%)";
+    toggleOff
+        ? toggleCircle.style.transform = "translate(10%, -50%)"
+        : toggleCircle.style.transform = "translate(120%, -50%)";
 });
 
-inputRange.oninput = function() {
-    if(toggleOff) {
+inputRange.oninput = function () {
+    if (toggleOff) {
         price.innerText = this.value + ".00";
     } else {
-        const discount = 0.25 * this.value;
-        if(Number.isInteger(discount)) {
+        const discount = this.value - (0.25 * this.value);
+        if (Number.isInteger(discount)) {
             price.innerText = discount + ".00";
         } else {
             price.innerText = discount;
