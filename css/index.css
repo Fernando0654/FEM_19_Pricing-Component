@@ -18,6 +18,20 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
 }
 
+.pattern-bg {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  background-image: url(../assets/img/bg-pattern.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
 header {
   width: 90%;
   max-width: 700px;
