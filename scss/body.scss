@@ -48,6 +48,20 @@
                 opacity: 0.7;
                 transition: opacity 0.2s;
                 background-color: color.$softCyan;
+                margin: 1em 0em;
+                &::-moz-range-thumb {
+                    appearance: none;
+                    width: 45px;
+                    height: 45px;
+                    border: 0;
+                    border-radius: 150px;
+                    background-color: color.$strongCyan;
+                    background-image: url("../assets/icons/icon-slider.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.282);
+                    cursor: pointer;
+                }
                 &::-webkit-slider-thumb {
                     appearance: none;
                     width: 45px;
@@ -74,6 +88,7 @@
     .content_body {
         @include mix.flexCenter(row);
         gap: 1em;
+        margin-top: 2em;
         margin-bottom: 1em;
         .title_monthly,
         h4 {
