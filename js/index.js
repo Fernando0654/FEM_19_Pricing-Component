@@ -16,6 +16,10 @@ inputRange.oninput = function() {
         price.innerText = this.value + ".00";
     } else {
         const discount = 0.25 * this.value;
-        price.innerText = discount + ".00";
+        if(Number.isInteger(discount)) {
+            price.innerText = discount + ".00";
+        } else {
+            price.innerText = discount;
+        }
     }
 }
