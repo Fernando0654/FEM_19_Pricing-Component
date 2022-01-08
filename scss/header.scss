@@ -6,6 +6,7 @@ header {
     text-align: center;
     padding-top: 4em;
     position: relative;
+    z-index: 3;
     h1 {
         @include mix.fontFace(800, color.$darkDesaturatedBlue);
         font-size: clamp(1rem, 6vw, 2.5rem);
